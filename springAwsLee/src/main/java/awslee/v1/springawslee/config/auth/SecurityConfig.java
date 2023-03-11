@@ -10,6 +10,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 
 @RequiredArgsConstructor
+//시큐리티 설정 활성화
 @EnableWebSecurity
 public class SecurityConfig{
 
@@ -33,5 +34,7 @@ public class SecurityConfig{
                     .oauth2Login()  //oauth2 로그인 설정 시작점
                         .userInfoEndpoint() //로그인 성공 이후 사용자 정보를 가져올때의 설정 담당
                             .userService(customOAuth2UserService);  //소셜로그인 성공시 후속조치를 진행할 userservice인터페이스의 구현체등록 , 소셜서비스에서 사용자 정보를 가져온 상태에서 추가할 기능 명시가능
+
+        return http.build();
     }
 }
