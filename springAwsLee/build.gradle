@@ -26,6 +26,8 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     compileOnly 'org.springframework.boot:spring-boot-starter-mustache'
 
+    compileOnly 'org.springframework.session:spring-session-jdbc'
+
     runtimeOnly 'com.h2database:h2'
 
     testImplementation("org.junit.vintage:junit-vintage-engine") {
